@@ -1,4 +1,4 @@
-from django.shortcuts import render, Httpresponse
+from django.shortcuts import render
 
 def o_mne(request):
     kontext = {
@@ -9,7 +9,7 @@ def o_mne(request):
     return render(request, "domace/o_mne.html", kontext)
 
 def ulohy(request):
-    kontext = {
+    kontexd = {
         "ulohy": "Programovanie",
     }
-    return render(request, "domace/ulohy.html", kontext)
+    return render(request, "domace/ulohy.html", kontexd)
