@@ -1,0 +1,20 @@
+ 
+<h1>Moje meno je {{ meno }}</h1>
+
+<p>Vek: {{ vek }}</p>
+<p>Trieda: {{ trieda }}</p>
+
+<h2>Obľúbené predmety</h2>
+<ol>
+    {% for z in oblubeny_predmet %}
+        <li>{{ z }}</li>
+    {% empty %}
+        <li>Žiadne obľúbené predmety</li>
+    {% endfor %}
+</ol>
+
+{% if vek >= 18 %}
+    <p>Som plnoletý.</p>
+{% else %}
+    <p>Nie som plnoletý.</p>
+{% endif %}
