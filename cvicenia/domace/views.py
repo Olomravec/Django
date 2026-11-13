@@ -22,3 +22,4 @@ def vizitka(request):
         "oblubeny_predmet": ["Programovanie", "matematika", "fyzika"],
         }
     return render(request, "domace/du2_vizitka.html", kontext)
+
