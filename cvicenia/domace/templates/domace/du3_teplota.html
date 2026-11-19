@@ -1,0 +1,25 @@
+<style>
+    body {
+        background-color: #eef6fb;
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        max-width: 360px;
+    }
+</style>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="">zadaj teplotu pre vypocet: <input type="text" name="tep"></label><br>
+    <select name="smer" id="smer">
+        <option value="c>f">°C → °F</option>
+        <option value="f>c">°F → °C</option>
+    </select><br>
+    <p><button >vypocet</button></p>
+</form>
+
+{% if ans %}
+    <p>vysledok: {{ ans }}</p>
+{% endif %}
