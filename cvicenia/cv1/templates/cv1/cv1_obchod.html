@@ -1,0 +1,25 @@
+    <h1>Obchod</h1>
+    <form method="GET">
+        <label for="max_cena">MAX cena:</label>
+        <input
+            type="number"
+            name="max_cena"
+            id="max_cena"
+            step="0.01"
+            value="{{ max_cena }}">
+        <button type="submit">Vyber</button>
+    </form>
+
+    <h2>Produkty</h2>
+    <table border="1">
+        <tr>
+            <th>Nazov</th>
+            <th>Cena</th>
+        </tr>
+    {% for p in cv1_obchod %}
+        <tr>
+            <td>{{ p.nazov }}</td>
+            <td>{{ p.cena }}€</td>
+        </tr>
+        {% endfor %}
+    </table>

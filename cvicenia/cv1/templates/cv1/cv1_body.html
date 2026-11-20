@@ -1,0 +1,21 @@
+<h1>Vypocet znamky</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Tvoje body: </label>
+        <input type="text" name="body" required>
+        <br><br>
+        <label>MAX bodov: </label>
+        <input type="text"name="maximum" required>
+        <br><br>
+        <button type="submit">Vypocitaj</button>
+    </form>
+
+    {% if vysledok %}
+        <h2>Takto si dopadol</h2>
+        <p>
+            {{ vysledok.body }} z {{ vysledok.maximum }} bodov
+            = {{ vysledok.percenta }} %
+            znamka {{ vysledok.znamka }}
+        </p>
+    {% endif %}
+
