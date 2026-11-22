@@ -1,25 +1,15 @@
-<style>
-    body {
-        background-color: #eef6fb;
-        font-family: Arial, sans-serif;
-    }
-
-    form {
-        background-color: #ffffff;
-        padding: 20px;
-        max-width: 360px;
-    }
-</style>
-<form action="" method="post">
+<h1>Prevod teploty</h1>
+<form method="post">
     {% csrf_token %}
-    <label for="">zadaj teplotu pre vypocet: <input type="text" name="tep"></label><br>
+    <label for="teplota">Teplota:</label>
+    <input type="text" name="teplota" id="teplota" value="{{ hodnota }}" required>
+    <label for="smer">Smer prevodu:</label>
     <select name="smer" id="smer">
-        <option value="c>f">°C → °F</option>
-        <option value="f>c">°F → °C</option>
-    </select><br>
-    <p><button >vypocet</button></p>
+        <option value="c_na_f" >°C → °F</option>
+        <option value="f_na_c" >°F → °C</option>
+    </select>
+    <button type="submit">Previesť</button>
 </form>
-
-{% if ans %}
-    <p>vysledok: {{ ans }}</p>
-{% endif %}
+    {% if vysledok != None %}
+        <p>Výsledok: <strong>{{ vysledok }} {{ jednotka }}</strong></p>
+    {% endif %}
