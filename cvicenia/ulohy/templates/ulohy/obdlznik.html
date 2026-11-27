@@ -1,3 +1,6 @@
+{% extends "ulohy/base.html" %}
+{% block titulok %}Súčet{% endblock %}
+{% block obsah %}
 <h1>Súčet dvoch čísel</h1>
 <form method = "post">
      {% csrf_token %}
@@ -5,8 +8,13 @@
     <input type="number" name="b" required>
     <button>Vypočítať</button>
 </form>
+<br>
 {% if obvod %}
-<p>Obsah je {{ obsah }}  </p>
-<p>Obvod je {{ obvod }}  </p>
+<div class="alert alert-dark" role="alert">
+    Obsah je {{ obsah }} 
+    Obvod je {{ obvod }} 
+</div> 
+
 
 {% endif %}
+{% endblock %}

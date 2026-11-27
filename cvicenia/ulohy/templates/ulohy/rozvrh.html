@@ -1,5 +1,8 @@
+{% extends "ulohy/base.html" %}
+{% block titulok %}Súčet{% endblock %}
+{% block obsah %}
 <h1>{{ den }}</h1>
-<table border="1">
+<table class="table table-striped">
     <tr><th>Hodina</th><th>Predmet</th></tr>
     {% for h in hodiny  %}
     <tr> 
@@ -9,3 +12,4 @@
     {% endfor %}
 
 </table>
+{% endblock %}

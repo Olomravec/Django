@@ -52,4 +52,8 @@ def obdlznik(request):
         obsah = round(a * b,2)
         obvod = round(2*(a+b),2)
     return render(request,"ulohy/obdlznik.html",{"obsah": obsah , "obvod": obvod})
-        
+def index(request):
+
+
+    return render( request, "ulohy/index.html",)
+

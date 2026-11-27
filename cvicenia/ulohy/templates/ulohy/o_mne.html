@@ -1,3 +1,6 @@
+{% extends "ulohy/base.html" %}
+{% block titulok %}Súčet{% endblock %}
+{% block obsah %}
 <h1>NIG volam sa{{ meno }}</h1>
 {% if vek >= 18 %}
 <p> Som plnoletý.</p> 
@@ -13,3 +16,4 @@
     <li>žiadne záľuby</li>
     {% endfor %}
 </ul>
+{% endblock %}

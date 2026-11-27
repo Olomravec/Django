@@ -1,8 +1,16 @@
+{% extends "ulohy/base.html" %}
+{% block titulok %}Súčet{% endblock %}
+{% block obsah %}
 <h1>Pozdrav</h1>
 <form method=="get">
 	<label><input type="text" name="meno"></label>
 	<button>Odoslať</button>
 </form>
+<br>
 {% if meno  %}
-<p>Ahoj, {{ meno }} </p>
+<div class="alert alert-dark" role="alert">
+  Ahoj, {{ meno }} 
+</div> 
+
 {% endif %}
+{% endblock %}
